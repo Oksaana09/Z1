@@ -858,7 +858,7 @@
       </div> -->
     <!-- </div> -->
 
-    <!-- <div id="callback">
+    <div id="callback">
       <form method="post" action="">
         <h2>Замовлення:</h2>
         <textarea name="order" id="order" readonly=""></textarea>
@@ -869,7 +869,7 @@
 
         <p><input type="submit" name="submit_callback" value="Відправити" /></p>
       </form>
-    </div>  -->
+    </div>  
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -925,7 +925,7 @@
           var y = $('#y').val();
           var z = $('#z').val();
           var material = $('#material').val();
-          var epoxy = $('#epoxy').val();
+          /* var epoxy = $('#epoxy').val();
           var materialEpoxy = 360;
           var round = $('#round').val();
           var pillar = $('#pillar').val();
@@ -934,13 +934,13 @@
           $('p.diameter').hide();
           $('p.x').show();
           $('p.y').show();
-
-          if ($('#round').is(':checked')) {
+ */
+         /*  if ($('#round').is(':checked')) {
             $('p.x').hide();
             $('p.y').hide();
             $('p.diameter').show();
             x = y = $('#diameter').val();
-          }
+          } */
 
           F = (x * y * z) / 1000000000;
           E = material * F;
@@ -950,7 +950,7 @@
             price = E * 6.5;
           else price = E * 9;
 
-          if (epoxy) {
+          /* if (epoxy) {
             //alert('e');
             M = (x * epoxy * z) / 1000000;
 
@@ -958,16 +958,16 @@
             //alert(N);
             price = (E + N) * 3.1;
             //alert(price);
-          }
+          } */
 
           if ($('#round').is(':checked')) {
             price *= 1.2;
             round_status = 'Так';
           }
 
-          if (pillar > 0) {
+          /* if (pillar > 0) {
             price += 3000;
-          }
+          } */
 
           $('#price').text(price.toFixed(2));
 
@@ -984,7 +984,7 @@
               'Товщина: ' +
               z +
               '\n' +
-              'Круглий стіл: ' +
+              /* 'Круглий стіл: ' +
               round_status +
               '\n' +
               'Епоксидна заливка по центру: ' +
@@ -992,7 +992,7 @@
               '\n' +
               'Опора: ' +
               pillar +
-              '\n' +
+              '\n' + */
               'Орієнтовна ціна: ' +
               price.toFixed(2)
           );
